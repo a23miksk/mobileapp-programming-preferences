@@ -40,5 +40,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        myPreferenceRef = getSharedPreferences("MyPreferencesName", MODE_PRIVATE);
+        myPreferenceEditor = myPreferenceRef.edit();
+
+        TextView prefTextRef = findViewById(R.id.prefText);
+        prefTextRef.setText(myPreferenceRef.getString("MyAppPreferenceString", "No preference found."));
+    }
 }
