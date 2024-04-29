@@ -26,6 +26,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/prefButton"
             android:onClick="savePref"/>
+        <TextView
+            android:id="@+id/prefText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prefButton" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
